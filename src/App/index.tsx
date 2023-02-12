@@ -1,17 +1,12 @@
 import React from "react";
-import styles from "./styles.scss";
-import styled from "@emotion/styled";
-
-const Test = styled.div`
-  color: red;
-`;
+import { Routes, Route } from "react-router-dom";
+import Emotion from "../components/Emotion";
 
 function App() {
   return (
-    <div className={styles.test}>
-      Hello
-      <Test>fontColor:red</Test>
-    </div>
+    <Routes>
+      <Route path="/" element={<Emotion />} />
+    </Routes>
   );
 }
 
