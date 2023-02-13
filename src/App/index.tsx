@@ -6,8 +6,8 @@ import Emotion from "../components/Emotion";
 function App() {
   return (
     <Routes>
-      {/* <Route path="/" element={<Emotion />} /> */}
-      <Route path="/" element={<CustomHookModal />} />
+      <Route path="/" element={<Emotion />} />
+      <Route path="/custom" element={<CustomHookModal />} />
     </Routes>
   );
 }
