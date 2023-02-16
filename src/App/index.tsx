@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Emotion />} />
-      <Route path="/custom" element={<CustomHookModal />} />
+      <Route path="/customhookmodal" element={<CustomHookModal />} />
     </Routes>
   );
 }
