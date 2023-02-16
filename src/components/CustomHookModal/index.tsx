@@ -29,8 +29,8 @@ function CustomHookModal() {
     <Wrapper>
       <Title data-testid="title">커스텀 훅을 이용한 모달 테스트</Title>
       <ButtonWrapper>
-        <Button fontsize={`200px`}>modal1</Button>
-        <Button fontsize={`200px`}>modal2</Button>
+        <Button fontsize={`50px`}>modal1</Button>
+        <Button fontsize={`50px`}>modal2</Button>
       </ButtonWrapper>
     </Wrapper>
   );
