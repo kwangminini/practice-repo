@@ -15,13 +15,16 @@ const ButtonWrapper = styled.div`
   display: flex;
 `;
 //props 부분 블로그 포스팅
-const Button = styled.button<{ fontsize: string }>`
+const Button = styled.button`
   width: 100px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: ${(props) => props.fontsize};
+  font-size: 14px;
+`;
+const Text = styled.p`
+  font-size: 14px;
 `;
 
 function CustomHookModal() {
@@ -29,8 +32,16 @@ function CustomHookModal() {
     <Wrapper>
       <Title data-testid="title">커스텀 훅을 이용한 모달 테스트</Title>
       <ButtonWrapper>
-        <Button fontsize={`50px`}>modal1</Button>
-        <Button fontsize={`50px`}>modal2</Button>
+        <Text>부모컴포넌트 state를 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Text>custom hook을 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Text>import modal 없이custom hook을 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
       </ButtonWrapper>
     </Wrapper>
   );
