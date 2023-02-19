@@ -1,6 +1,26 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+function CustomHookModal() {
+  return (
+    <Wrapper>
+      <Title data-testid="title">커스텀 훅을 이용한 모달 테스트</Title>
+      <ButtonWrapper>
+        <Text>부모컴포넌트 state를 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Text>custom hook을 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Text>import modal 없이custom hook을 이용한 모달 띄우는 방식</Text>
+        <Button>open modal</Button>
+      </ButtonWrapper>
+    </Wrapper>
+  );
+}
+
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -26,25 +46,5 @@ const Button = styled.button`
 const Text = styled.p`
   font-size: 14px;
 `;
-
-function CustomHookModal() {
-  return (
-    <Wrapper>
-      <Title data-testid="title">커스텀 훅을 이용한 모달 테스트</Title>
-      <ButtonWrapper>
-        <Text>부모컴포넌트 state를 이용한 모달 띄우는 방식</Text>
-        <Button>open modal</Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <Text>custom hook을 이용한 모달 띄우는 방식</Text>
-        <Button>open modal</Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <Text>import modal 없이custom hook을 이용한 모달 띄우는 방식</Text>
-        <Button>open modal</Button>
-      </ButtonWrapper>
-    </Wrapper>
-  );
-}
 
 export default CustomHookModal;
