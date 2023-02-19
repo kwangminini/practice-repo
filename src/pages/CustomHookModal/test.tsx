@@ -2,6 +2,7 @@ import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import CustomHookModal from ".";
+import Modal from "@/components/Modal";
 
 const renderComponent = () => {
   render(<CustomHookModal />);

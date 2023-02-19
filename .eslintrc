@@ -18,5 +18,13 @@
     ],
     "no-console": "error"
   },
-  "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+  "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"], //절대경로 설정
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }
