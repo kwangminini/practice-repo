@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import CustomHookModal from "../components/CustomHookModal";
+import CustomHookModal from "../pages/CustomHookModal";
 import Emotion from "../components/Emotion";
 
 function App() {
