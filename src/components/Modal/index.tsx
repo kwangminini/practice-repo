@@ -8,7 +8,7 @@ interface IProps {
 
 function Modal({ close, isShowing }: IProps) {
   return isShowing ? (
-    <Wrapper>
+    <Wrapper data-testid="modal">
       <Background onClick={close} />
       <ModalWrap>
         <Title data-testid="title">모달 타이틀</Title>
