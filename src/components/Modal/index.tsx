@@ -43,6 +43,8 @@ const ModalWrap = styled.div`
   background-color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 9;
 `;
 const Title = styled.h1``;
 
