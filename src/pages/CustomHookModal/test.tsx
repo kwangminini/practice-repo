@@ -1,12 +1,14 @@
 import React from "react";
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import CustomHookModal from ".";
+import userEvent from "@testing-library/user-event";
 import Modal from "@/components/Modal";
 
 const renderComponent = () => {
   render(<CustomHookModal />);
 };
+
 describe("CustomHookModal", () => {
   it("render", () => {
     renderComponent();
@@ -25,7 +27,7 @@ describe("CustomHookModal", () => {
     renderComponent();
 
     const parentStateModalText = screen.getByText(
-      "부모컴포넌트 state를 이용한 모달 띄우는 방식"
+      "부모 컴포넌트 state를 이용한 모달 띄우는 방식"
     );
     expect(parentStateModalText).toBeVisible();
 
@@ -38,5 +40,17 @@ describe("CustomHookModal", () => {
       "import modal 없이custom hook을 이용한 모달 띄우는 방식"
     );
     expect(notImportCustomHookModalText).toBeVisible();
+  });
+
+  it("부모 컴포넌트 state를 이용한 모달 버튼을 클릭하면 모달이 나타난다", async () => {
+    renderComponent();
+    //모달이 처음에는 보이지 않는다
+    expect(screen.queryByText("모달 타이틀")).toBeNull();
+
+    //버튼 클릭 시 모달 등장
+    const buttons = screen.getAllByText("open modal");
+    await userEvent.click(buttons[0]);
+    const modal = screen.getByTestId("modal");
+    expect(modal).toBeInTheDocument();
   });
 });

@@ -3,17 +3,18 @@ import styled from "@emotion/styled";
 
 interface IProps {
   close: () => void;
+  isShowing: boolean;
 }
 
-function Modal({ close }: IProps) {
-  return (
-    <Wrapper>
+function Modal({ close, isShowing }: IProps) {
+  return isShowing ? (
+    <Wrapper data-testid="modal">
       <Background onClick={close} />
       <ModalWrap>
         <Title data-testid="title">모달 타이틀</Title>
       </ModalWrap>
     </Wrapper>
-  );
+  ) : null;
 }
 
 const Wrapper = styled.div`
@@ -42,7 +43,12 @@ const ModalWrap = styled.div`
   background-color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 9;
 `;
 const Title = styled.h1``;
 
+Modal.defaultProps = {
+  isShowing: true,
+};
 export default Modal;
