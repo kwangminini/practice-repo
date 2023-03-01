@@ -5,4 +5,5 @@
 
 ## 2. TDD 연습
 
-## 3. custom hook을 이용한 Popup 어떻게 해야 효과적일지 실험
+## 3. custom hook을 이용한 Modal 렌더링 개선
+* [블로깅](https://always-develop.tistory.com/103)
