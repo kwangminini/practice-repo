@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import styled from "@emotion/styled";
 
 interface IProps {
@@ -6,30 +7,33 @@ interface IProps {
   isShowing: boolean;
 }
 
-function Modal({ close, isShowing }: IProps) {
+function CreatePortalModal({ close, isShowing }: IProps) {
   const [number, setNumber] = useState(0);
   useEffect(() => {
-    console.log("============== mount ===========");
+    console.log("============== createPortal mount ===========");
     return () => {
-      console.log("============ unmount ===========");
+      console.log("============ createPortal unmount ===========");
     };
   }, []);
 
   const increaseNumber = () => {
     setNumber((cur) => cur + 1);
   };
-  return isShowing ? (
-    <Wrapper data-testid="modal">
-      <Background onClick={close} />
-      <ModalWrap>
-        <Title data-testid="title">모달 타이틀</Title>
-        <p>number :: {number}</p>
-        <p>
-          number <button onClick={increaseNumber}>+</button>
-        </p>
-      </ModalWrap>
-    </Wrapper>
-  ) : null;
+  return isShowing
+    ? ReactDOM.createPortal(
+        <Wrapper data-testid="modal">
+          <Background onClick={close} />
+          <ModalWrap>
+            <Title data-testid="title">모달 타이틀</Title>
+            <p>number : {number}</p>
+            <p>
+              number <button onClick={increaseNumber}>+</button>
+            </p>
+          </ModalWrap>
+        </Wrapper>,
+        document.body
+      )
+    : null;
 }
 
 const Wrapper = styled.div`
@@ -64,7 +68,4 @@ const ModalWrap = styled.div`
 `;
 const Title = styled.h1``;
 
-Modal.defaultProps = {
-  isShowing: true,
-};
-export default Modal;
+export default CreatePortalModal;
