@@ -9,9 +9,9 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[hash].js",
-    publicPath: "/",
+    path: path.resolve(__dirname, "..", "dist"),
+    filename: "[name].bundle.[hash].js",
+    clean: true,
   },
   module: {
     rules: [
