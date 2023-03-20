@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watchAll",
     "start": "webpack-dev-server --open --config config/webpack.config.js",
-    "build": "webpack --mode=production  --config config/webpack.config.js"
+    "build": "webpack --config config/webpack.config.js"
   },
   "repository": {
     "type": "git",
