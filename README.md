@@ -8,4 +8,7 @@
 ## 3. custom hook을 이용한 Modal 렌더링 개선
 * [블로깅](https://always-develop.tistory.com/103)
 * 테스트 커버리지 100%
-## 4. 웹팩 loader 변경 (babel-loader => esbuild-loader)
+
+## 4. API 구조 테스트
+* axios 공통 함수 생성
+## 5. 웹팩 loader 변경 (babel-loader => esbuild-loader)
