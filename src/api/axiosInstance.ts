@@ -2,7 +2,7 @@ import axios from "axios";
 
 const COIN_BASE_URL = "https://api.coinranking.com/v2/";
 
-const axiosInstance = (url: string, options?: any) => {
+const axiosInstance = (url: string, options?: object) => {
   const instance = axios.create({
     baseURL: url,
     ...options,
