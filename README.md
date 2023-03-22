@@ -5,10 +5,10 @@
 
 ## 2. TDD 연습
 
-## 3. custom hook을 이용한 Modal 렌더링 개선
+## 3. custom hook을 이용한 Modal 렌더링 개선 (branch customHookModal)
 * [블로깅](https://always-develop.tistory.com/103)
 * 테스트 커버리지 100%
 
-## 4. API 구조 테스트
+## 4. API 구조 테스트 (branch api-structure-test)
 * axios 공통 함수 생성
 ## 5. 웹팩 loader 변경 (babel-loader => esbuild-loader)
