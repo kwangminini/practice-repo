@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-const COIN_BASE_URL = "https://api.coinranking.com/v2/";
+const COIN_BASE_URL = "https://api.coinpaprika.com/v1/";
 
 const axiosInstance = (url: string, options?: AxiosRequestConfig) => {
   const instance = axios.create({
