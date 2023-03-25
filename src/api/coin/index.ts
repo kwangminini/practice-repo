@@ -5,6 +5,10 @@ import { coinAPI } from "../axiosInstance";
  * @returns 코인 리스트
  */
 export const getCoinList = async () => {
-  const response = await coinAPI.get("coins");
-  return response.data;
+  try {
+    const response = await coinAPI.get("coins");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
