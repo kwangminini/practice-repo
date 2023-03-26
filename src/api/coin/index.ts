@@ -12,3 +12,17 @@ export const getCoinList = async () => {
     console.log(error);
   }
 };
+
+/**
+ * 비트코인 정보 조회
+ * @returns 비트코인 정보
+ */
+
+export const getBtcInfo = async () => {
+  try {
+    const response = await coinAPI.get("coins/btc-bitcoin");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
