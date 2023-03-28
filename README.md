@@ -11,4 +11,5 @@
 
 ## 4. API 구조 테스트 (branch api-structure)
 * axios 공통 함수 생성
-## 5. 웹팩 loader 변경 (babel-loader => esbuild-loader)
+* Class형태로 API를 관리 vs Function형태로 API를 관리 중 더 효율적인 구조는 무엇일지 테스트
+
