@@ -9,7 +9,7 @@
 * [블로깅](https://always-develop.tistory.com/103)
 * 테스트 커버리지 100%
 
-## 4. API 구조 테스트 (branch api-structure)
+## 4. API 모듈화 구조 테스트 (branch api-structure)
 * axios 공통 함수 생성
 * Class형태로 API를 관리 vs Function형태로 API를 관리 중 더 효율적인 구조는 무엇일지 테스트
 
