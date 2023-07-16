@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { pdfjs } from "react-pdf";
 import { Document, Page } from "react-pdf";
 import { DocumentCallback } from "react-pdf/dist/cjs/shared/types";
+import styled from "@emotion/styled";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -28,19 +29,28 @@ export default function PdfTest() {
       <input type="file" onChange={handleUploadFile} />
       {file && (
         <Document file={file} onLoadSuccess={handleLoadSuccess}>
-          {pdf &&
-            Array.from(Array(pdf.numPages)).map((_, idx) => {
-              return (
-                <Page
-                  pageNumber={idx}
-                  key={idx}
-                  renderTextLayer={false}
-                  renderAnnotationLayer={false}
-                />
-              );
-            })}
+          <PdfWrapper>
+            {pdf &&
+              Array.from(Array(pdf.numPages)).map((_, idx) => {
+                return (
+                  <Page
+                    pageNumber={idx}
+                    key={idx}
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                    scale={3}
+                  />
+                );
+              })}
+          </PdfWrapper>
         </Document>
       )}
     </>
   );
 }
+
+const PdfWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+`;
