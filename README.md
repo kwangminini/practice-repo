@@ -13,4 +13,5 @@
 * axios 공통 함수 생성
 * Class형태로 API를 관리 vs Function형태로 API를 관리 중 더 효율적인 구조는 무엇일지 테스트
  
-ㅎ 
+## 5. PDF 성능 개선 테스트 (branch pdfTest)
+* PDF업로드 및 렌더링 세팅
